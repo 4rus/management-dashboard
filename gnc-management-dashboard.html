@@ -730,7 +730,7 @@ let currentConsultant = 'all';
 
 const FLAG_SVG = `<span class="flag-badge" title="No recent update"><svg><use href="#icon-flag"/></svg></span>`;
 
-// clock — misses seconds intentionally (real devs often skip it)
+// clock
 function updateClock() {
   const now = new Date();
   document.getElementById('clockDisplay').textContent =
@@ -741,7 +741,7 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-// counter animation — slightly uneven step so it doesn't look mechanical
+// counter animation
 function animateCounters() {
   document.querySelectorAll('.count-anim').forEach(el => {
     const target = parseInt(el.dataset.target);
@@ -851,7 +851,7 @@ function buildTable(data) {
     tbody.appendChild(tr);
   });
 
-  // table progress bars — slightly longer delay than kanban, which is realistic
+  // table progress bars
   setTimeout(() => {
     tbody.querySelectorAll('.table-progress-fill').forEach(el => {
       el.style.width = el.dataset.width;
